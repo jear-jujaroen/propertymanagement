@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "git-cz" 
+    "commit": "git-cz"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/jear-jujaroen/propertymanagement#readme",
   "devDependencies": {
     "commitizen": "^2.9.2",
-    "cz-conventional-changelog": "^1.2.0"
+    "cz-conventional-changelog": "^1.2.0",
+    "webpack": "^1.14.0"
   },
   "config": {
     "commitizen": {
