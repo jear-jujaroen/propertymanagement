@@ -1,10 +1,15 @@
-'esversion: 6';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './hello';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import NavBar from './app/AppBar';
+
+const App = () => (
+  <MuiThemeProvider>
+    <NavBar />
+  </MuiThemeProvider>
+);
 
 ReactDOM.render(
-  <Hello name="hello" />,
-  document.body
-)
+  <App />,
+  document.getElementById('container')
+);

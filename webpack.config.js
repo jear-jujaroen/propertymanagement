@@ -28,7 +28,7 @@ var config = {
     // ],
     loaders: [
       {
-        test: [/\.js$/, /\.es6$/],
+        test: [/\.js$/, /\.jsx$/],
         exclude: /node_modules/,
         loaders: [
           'react-hot',
@@ -41,11 +41,17 @@ var config = {
       {
         test:/\.css$/,
         loader: 'style-loader!css-loader'
-      }
+      },
+      {
+        test: /\.less$/,
+        loader: 'style-loader!css-loader!less-loader'
+      },
+      { test: /\.(woff2|woff|ttf|svg|eot)$/,
+        loader: 'file-loader' }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.es6']
+    extensions: ['', '.js', '.jsx']
   }
 }
 
