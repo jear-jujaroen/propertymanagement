@@ -1,30 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
 
-export default class LeftNavBar extends Component {
+const LeftNavBar = ({open, handleToggle, handleClose}) => (
+  <Drawer
+    docked={false}
+    open={open}
+    onRequestChange={() => handleToggle({open})}
+  >
+    <MenuItem onTouchTap={() => handleClose({open})}>Profile</MenuItem>
+    <MenuItem onTouchTap={() => handleClose({open})}>Apartments</MenuItem>
+    <MenuItem onTouchTap={() => handleClose({open})}>Tenants</MenuItem>
+    <MenuItem onTouchTap={() => handleClose({open})}>Settings</MenuItem>
+  </Drawer>
+);
 
-  constructor(props) {
-    super(props);
-    // this.state = {open: false};
-  }
-
-  handleClose = () => this.setState({open: false});
-
-  render() {
-    return (
-      <Drawer
-
-        docked={false}
-        open={this.props.open}
-        onRequestChange={(open) => this.props.handleToggle({open})}
-      >
-        <MenuItem onTouchTap={this.handleClose}>Profile</MenuItem>
-        <MenuItem onTouchTap={this.handleClose}>Apartments</MenuItem>
-        <MenuItem onTouchTap={this.handleClose}>Tenants</MenuItem>
-        <MenuItem onTouchTap={this.handleClose}>Settings</MenuItem>
-      </Drawer>
-    );
-  }
-}
+export default LeftNavBar
