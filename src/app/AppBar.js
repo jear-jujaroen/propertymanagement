@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
 import LeftNavBar from './LeftNavBar';
+import FlatButton from 'material-ui/FlatButton'
 
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
@@ -23,7 +24,7 @@ export default class NavBar extends Component {
         <AppBar
           title="Property Management"
           onLeftIconButtonTouchTap={this.handleToggle}
-          iconClassNameRight="muidocs-icon-navigation-expand-more"
+          iconElementRight={<FlatButton label="Welcome, Fred!" />}
         />
         <LeftNavBar
           open={this.state.open}
