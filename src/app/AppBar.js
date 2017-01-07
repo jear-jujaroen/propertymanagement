@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
+// import LeftNavBar from './LeftNavBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -30,6 +31,7 @@ export default class NavBar extends Component {
           iconClassNameRight="muidocs-icon-navigation-expand-more"
         />
         <Drawer
+
           docked={false}
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
@@ -43,3 +45,9 @@ export default class NavBar extends Component {
     )
   }
 };
+
+          // onLeftIconButtonTouchTap={this.handleToggle}
+// <LeftNavBar
+//   open={this.state.open}
+//   onLeftIconButtonTouchTap={this.handleToggle}
+// />
