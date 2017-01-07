@@ -3,20 +3,37 @@
 }*/
 
 .Updates {
-  /*margin: 35px 20px auto !important;*/
-  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  /*justify-content: center;*/
   text-align: center;
+  display: inline-block;
 }
 
 .ApartmentHome {
+  /*height: 100% !important;*/
+  width: 40% !important;
   margin: 35px 35px auto !important;
-  padding-right: 10px !important;
   position: relative !important;
-  text-align: center !important;
+  /*text-align: center !important;*/
+  /*justify-content: center !important;*/
+  display: inline-block !important;
 }
 
-.TenantHome {
-  margin: 35px 35px auto !important;
+/*.ApartmentInner {
+  width: 80% !important;
+  height: 70% !important;
+  margin: 30px 30px auto !important;
+  padding-right: 10px 10px !important;
   position: relative !important;
   text-align: center !important;
+}*/
+
+.TenantHome {
+  /*height: 40% !important;*/
+  width: 40% !important;
+  margin: 35px 35px auto !important;
+  position: relative !important;
+  /*text-align: center !important;*/
+  display: inline-block !important;
 }

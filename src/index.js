@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import NavBar from './app/AppBar';
-import Home from './apartments/updates';
+import Home from './app/Home';
 
 import '../css/main.css';
 

@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
-import ApartmentUpdates from '../apartments/updates';
+import ApartmentUpdates from '../apartments/ApartmentUpdates';
+import TenantUpdates from '../tenants/TenantUpdates';
 
 const Home = () => (
-  <div>
+  <div className="Updates">
     <ApartmentUpdates />
+    <TenantUpdates />
   </div>
 );
 

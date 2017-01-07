@@ -1,27 +1,34 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar';
 
 const style = {
   height: 450,
-  width: 540,
+  width: 530,
   // margin: 20,
   // textAlign: 'center',
   display: 'inline-block',
 };
 
 const ApartmentUpdates = () => (
-  <div className="Updates">
+  <div className="ApartmentHome">
     <Paper
-    className="ApartmentHome"
-    style={style}
-    zDepth={2} />
-
-    <Paper
-    className="TenantHome"
-    style={style}
-    zDepth={2} />
+      style={style}
+      zDepth={2}
+    >
+      <AppBar
+        title="Apartment"
+        showMenuIconButton={false}
+      />
+    </Paper>
   </div>
 );
 
 export default ApartmentUpdates;
+
+// <Paper
+//   className="ApartmentInner"
+//   style={style}
+//   zDepth={1}
+// />
