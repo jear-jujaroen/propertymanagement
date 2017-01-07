@@ -7,7 +7,7 @@ import Home from './apartments/updates';
 import '../css/main.css';
 
 const App = () => (
-  <div>
+  <div className="MainWrapper">
     <MuiThemeProvider>
       <NavBar />
     </MuiThemeProvider>

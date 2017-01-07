@@ -1,5 +1,22 @@
-.HomePaper {
-  margin: 35px auto !important;
+/*.MainWrapper {
+  justify-content: center;
+}*/
+
+.Updates {
+  /*margin: 35px 20px auto !important;*/
+  justify-content: center;
+  text-align: center;
+}
+
+.ApartmentHome {
+  margin: 35px 35px auto !important;
+  padding-right: 10px !important;
+  position: relative !important;
+  text-align: center !important;
+}
+
+.TenantHome {
+  margin: 35px 35px auto !important;
   position: relative !important;
   text-align: center !important;
 }
