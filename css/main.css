@@ -1,4 +1,5 @@
-.header {
-
-  border: 5px solid red;
+.HomePaper {
+  margin: 35px auto !important;
+  position: relative !important;
+  text-align: center !important;
 }

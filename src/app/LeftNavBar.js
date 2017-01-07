@@ -15,7 +15,6 @@ export default class LeftNavBar extends Component {
   render() {
     return (
       <Drawer
-
         docked={false}
         open={this.props.open}
         onRequestChange={(open) => this.props.handleToggle({open})}
