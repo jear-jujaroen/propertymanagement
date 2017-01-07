@@ -17,6 +17,7 @@ export default class NavBar extends Component {
   }
 
   handleToggle = () => this.setState({open: !this.state.open});
+  handleClose = () => this.setState({open: false});
 
   render() {
     return (
@@ -29,7 +30,7 @@ export default class NavBar extends Component {
         <LeftNavBar
           open={this.state.open}
           handleToggle={this.handleToggle.bind(this)}
-          onLeftIconButtonTouchTap={this.handleToggle}
+          handleClose={this.handleClose.bind(this)}
         />
       </div>
     )
