@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
-// import LeftNavBar from './LeftNavBar';
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import RaisedButton from 'material-ui/RaisedButton';
+import LeftNavBar from './LeftNavBar';
 
 var injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
@@ -20,8 +17,6 @@ export default class NavBar extends Component {
 
   handleToggle = () => this.setState({open: !this.state.open});
 
-  handleClose = () => this.setState({open: false});
-
   render() {
     return (
       <div>
@@ -30,24 +25,12 @@ export default class NavBar extends Component {
           onLeftIconButtonTouchTap={this.handleToggle}
           iconClassNameRight="muidocs-icon-navigation-expand-more"
         />
-        <Drawer
-
-          docked={false}
+        <LeftNavBar
           open={this.state.open}
-          onRequestChange={(open) => this.setState({open})}
-        >
-          <MenuItem onTouchTap={this.handleClose}>Profile</MenuItem>
-          <MenuItem onTouchTap={this.handleClose}>Apartments</MenuItem>
-          <MenuItem onTouchTap={this.handleClose}>Tenants</MenuItem>
-          <MenuItem onTouchTap={this.handleClose}>Settings</MenuItem>
-        </Drawer>
+          handleToggle={this.handleToggle.bind(this)}
+          onLeftIconButtonTouchTap={this.handleToggle}
+        />
       </div>
     )
   }
 };
-
-          // onLeftIconButtonTouchTap={this.handleToggle}
-// <LeftNavBar
-//   open={this.state.open}
-//   onLeftIconButtonTouchTap={this.handleToggle}
-// />
