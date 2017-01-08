@@ -15,4 +15,10 @@ const LeftNavBar = ({open, handleToggle, handleClose}) => (
   </Drawer>
 );
 
+LeftNavBar.propTypes = {
+  open: React.PropTypes.bool.isRequired,
+  handleToggle: React.PropTypes.func.isRequired,
+  handleClose: React.PropTypes.func.isRequired
+};
+
 export default LeftNavBar
