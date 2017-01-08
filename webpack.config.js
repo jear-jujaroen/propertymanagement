@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 var config = {
+  devtool: 'inline-sourcemap',
   context: path.join(__dirname, 'src'),
   entry: [
     // 'webpack-dev-server/client?http://0.0.0.0:3000',
