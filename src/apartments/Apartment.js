@@ -1,9 +1,11 @@
 import React from 'react';
+import ApartmentTable from './ApartmentList';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 const Apartment = () => (
-  <div>
-    <h1>Apartments</h1>
-  </div>
+  <MuiThemeProvider>
+    <ApartmentTable />
+  </MuiThemeProvider>
 );
 
 export default Apartment;
