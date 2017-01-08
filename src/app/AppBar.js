@@ -3,7 +3,7 @@ import AppBar from 'material-ui/AppBar';
 import LeftNavBar from './LeftNavBar';
 import FlatButton from 'material-ui/FlatButton'
 
-var injectTapEventPlugin = require("react-tap-event-plugin");
+var injectTapEventPlugin = require('react-tap-event-plugin');
 injectTapEventPlugin();
 /**
  * A simple example of `AppBar` with an icon on the right.
@@ -23,9 +23,9 @@ export default class NavBar extends Component {
     return (
       <div>
         <AppBar
-          title="Property Management"
+          title='Property Management'
           onLeftIconButtonTouchTap={this.handleToggle}
-          iconElementRight={<FlatButton label="Welcome, Fred!" />}
+          iconElementRight={<FlatButton label='Welcome, Fred!' />}
         />
         <LeftNavBar
           open={this.state.open}

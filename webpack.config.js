@@ -20,13 +20,13 @@ var config = {
     new webpack.NoErrorsPlugin()
   ],
   module: {
-    // preLoaders: [
-    //   {
-    //     test: /\.js$/,
-    //     exclude: /node_modules/
-        // loader: 'jshint-loader'
-    //   }
-    // ],
+    preLoaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
+      }
+    ],
     loaders: [
       {
         test: [/\.js$/, /\.jsx$/],
@@ -35,9 +35,10 @@ var config = {
           'react-hot',
           'babel-loader'
         ]
-        // query: {
-        //   presets: ['react', 'es2015']
-        // }
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       },
       {
         test:/\.css$/,
