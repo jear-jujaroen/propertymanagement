@@ -4,6 +4,7 @@ import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 're
 import Home from './app/Home';
 import Container from './app/App'
 import Apartment from './apartments/Apartment'
+import Tenant from './tenants/Tenant'
 
 import '../css/main.css';
 
@@ -14,6 +15,7 @@ export default class App extends Component {
         <Route path='/' component={Container}>
           <IndexRoute component={Home} />
           <Route path='/apartment' component={Apartment} />
+          <Route path='/tenant' component={Tenant} />
         </Route>
       </Router>
     )

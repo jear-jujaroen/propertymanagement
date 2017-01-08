@@ -11,7 +11,7 @@ const LeftNavBar = ({open, handleToggle, handleClose}) => (
   >
     <Link to='/'><MenuItem onTouchTap={() => handleClose({open})}>Home</MenuItem></Link>
     <Link to='/apartment'><MenuItem onTouchTap={() => handleClose({open})}>Apartments</MenuItem></Link>
-    <MenuItem onTouchTap={() => handleClose({open})}>Tenants</MenuItem>
+    <Link to='/tenant'><MenuItem onTouchTap={() => handleClose({open})}>Tenants</MenuItem></Link>
     <MenuItem onTouchTap={() => handleClose({open})}>Settings</MenuItem>
   </Drawer>
 );
