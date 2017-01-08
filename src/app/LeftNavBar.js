@@ -1,6 +1,7 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+import {Link} from 'react-router';
 
 const LeftNavBar = ({open, handleToggle, handleClose}) => (
   <Drawer
@@ -8,8 +9,8 @@ const LeftNavBar = ({open, handleToggle, handleClose}) => (
     open={open}
     onRequestChange={() => handleToggle({open})}
   >
-    <MenuItem onTouchTap={() => handleClose({open})}>Profile</MenuItem>
-    <MenuItem onTouchTap={() => handleClose({open})}>Apartments</MenuItem>
+    <Link to='/'><MenuItem onTouchTap={() => handleClose({open})}>Home</MenuItem></Link>
+    <Link to='/apartment'><MenuItem onTouchTap={() => handleClose({open})}>Apartments</MenuItem></Link>
     <MenuItem onTouchTap={() => handleClose({open})}>Tenants</MenuItem>
     <MenuItem onTouchTap={() => handleClose({open})}>Settings</MenuItem>
   </Drawer>

@@ -1,21 +1,24 @@
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import NavBar from './app/AppBar';
+import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
 import Home from './app/Home';
+import Container from './app/App'
+import Apartment from './apartments/Apartment'
 
 import '../css/main.css';
 
-const App = () => (
-  <div className="MainWrapper">
-    <MuiThemeProvider>
-      <NavBar />
-    </MuiThemeProvider>
-    <MuiThemeProvider>
-      <Home />
-    </MuiThemeProvider>
-  </div>
-);
+export default class App extends Component {
+  render() {
+    return (
+      <Router history={hashHistory}>
+        <Route path='/' component={Container}>
+          <IndexRoute component={Home} />
+          <Route path='/apartment' component={Apartment} />
+        </Route>
+      </Router>
+    )
+  }
+}
 
 ReactDOM.render(
   <App />,
