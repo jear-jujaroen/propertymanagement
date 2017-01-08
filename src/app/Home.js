@@ -13,8 +13,6 @@ const Home = () => (
     <MuiThemeProvider>
       <TenantUpdates />
     </MuiThemeProvider>
-    <Apartment />
-    <Tenant />
   </div>
 )
 
