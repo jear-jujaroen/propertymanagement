@@ -1,12 +1,10 @@
-import React, {Component} from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import ApartmentUpdates from '../apartments/ApartmentUpdates';
-import TenantUpdates from '../tenants/TenantUpdates';
-import Apartment from '../apartments/Apartment';
-import Tenant from '../tenants/Tenant';
+import React from 'react'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import ApartmentUpdates from '../apartments/ApartmentUpdates'
+import TenantUpdates from '../tenants/TenantUpdates'
 
 const Home = () => (
-  <div className="Updates">
+  <div className='Updates'>
     <MuiThemeProvider>
       <ApartmentUpdates />
     </MuiThemeProvider>
@@ -16,4 +14,4 @@ const Home = () => (
   </div>
 )
 
-export default Home;
+export default Home

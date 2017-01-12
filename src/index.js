@@ -1,15 +1,15 @@
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
-import Home from './app/Home';
+import React, {Component} from 'react'
+import ReactDOM from 'react-dom'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router'
+import Home from './app/Home'
 import Container from './app/App'
 import Apartment from './apartments/Apartment'
 import Tenant from './tenants/Tenant'
 
-import '../css/main.css';
+import '../css/main.css'
 
 export default class App extends Component {
-  render() {
+  render () {
     return (
       <Router history={hashHistory}>
         <Route path='/' component={Container}>
@@ -25,4 +25,4 @@ export default class App extends Component {
 ReactDOM.render(
   <App />,
   document.getElementById('container')
-);
+)

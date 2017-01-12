@@ -1,5 +1,5 @@
-var path = require('path');
-var webpack = require('webpack');
+var path = require('path')
+var webpack = require('webpack')
 
 var config = {
   devtool: 'inline-sourcemap',
@@ -15,33 +15,52 @@ var config = {
     filename: 'bundle.js',
     publicPath: '/dist/'
   },
+  eslint: {
+    configFile: './.eslintrc'
+  },
   plugins: [
     // new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
   module: {
-    preLoaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader'
-      }
-    ],
-    loaders: [
+    preloaders: [
       {
         test: [/\.js$/, /\.jsx$/],
         exclude: /node_modules/,
-        loaders: [
-          'react-hot',
-          'babel-loader'
-        ]
+        loader: 'jshint-loader'
+      }
+    ],
+    // preLoaders: [
+    //   {
+    //     test: /\.jsx?$/,
+    //     loader: 'eslint-loader',
+    //     exclude: /node_modules/
+    //   }
+    // ],
+    loaders: [
+      {
+        test: [/\.js$/],
+        exclude: /node_modules/,
+        loader: 'react-hot!babel'
+        // loaders: [
+        //   'react-hot',
+        //   'babel-loader'
+        // ]
       },
+      // {
+      //   test: [/\.js$/],
+      //   exclude: /node_modules/,
+      //   loaders: [
+      //     'babel-loader',
+      //     'eslint-loader'
+      //   ]
+      // },
       {
         test: /\.json$/,
         loader: 'json-loader'
       },
       {
-        test:/\.css$/,
+        test: /\.css$/,
         loader: 'style-loader!css-loader'
       },
       {
@@ -57,4 +76,7 @@ var config = {
   }
 }
 
-module.exports = config;
+module.exports = config
+
+// "prestart": "npm run lint",
+// "lint": "eslint ./src/**/*.{js, jsx} --fix",

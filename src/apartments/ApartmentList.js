@@ -1,5 +1,5 @@
-import React from 'react';
-import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
+import React from 'react'
+import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table'
 
 const ApartmentTable = () => (
   <Table>
@@ -33,6 +33,6 @@ const ApartmentTable = () => (
       </TableRow>
     </TableBody>
   </Table>
-);
+)
 
-export default ApartmentTable;
+export default ApartmentTable
