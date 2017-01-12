@@ -3,14 +3,14 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 
 class ApartmentTable extends Component {
-  propTypes = {
+  static propTypes = {
     apartments: PropTypes.array.isRequired
   }
 
   renderList () {
     return this.props.apartments.map((apartment) => {
       return (
-        <li key={apartment.title}>{apartment.title}</li>
+        <li key={apartment.name}>{apartment.name}</li>
       )
     })
   }
