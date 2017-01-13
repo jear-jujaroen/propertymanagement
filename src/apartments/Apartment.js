@@ -1,5 +1,5 @@
 import React from 'react'
-import ApartmentTable from './ApartmentList'
+import ApartmentTable from './ApartmentListContainer'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
 const Apartment = () => (
