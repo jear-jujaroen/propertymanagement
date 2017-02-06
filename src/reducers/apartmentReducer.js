@@ -1,7 +1,7 @@
 export default function () {
   return [
-    {name: 'Apartment #1', id: 1},
-    {name: 'Apartment #2', id: 2},
-    {name: 'Apartment #3', id: 3}
+    {name: 'Apartment #1', status: 'full'},
+    {name: 'Apartment #2', status: 'almost full'},
+    {name: 'Apartment #3', status: '3 rooms available'}
   ]
 }

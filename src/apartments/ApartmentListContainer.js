@@ -19,7 +19,7 @@ class ApartmentTable extends Component {
           fixedHeader
           selectable
           multiSelectable={false}
-          onCellClick={(row) => this.props.selectApartment(this.props.apartments[row].name)}
+          onCellClick={(row) => this.props.selectApartment(this.props.apartments[row])}
         >
           <TableHeader
             displaySelectAll={false}
