@@ -1,9 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table'
-// import ApartmentList from './ApartmentList'
+import ApartmentDetail from './ApartmentDetail'
 import { selectApartment } from '../actions/actionCreators'
 import { bindActionCreators } from 'redux'
+// import {Link} from 'react-router'
 
 class ApartmentTable extends Component {
   static propTypes = {
@@ -13,44 +14,47 @@ class ApartmentTable extends Component {
 
   render () {
     return (
-      <Table
-        fixedHeader
-        selectable
-        multiSelectable={false}
-        onCellClick={(row, children) => this.props.selectApartment(this.props.apartments[row].name)}
-      >
-        <TableHeader
-          displaySelectAll={false}
-          adjustForCheckbox
-          enableSelectAll={false}
+      <div>
+        <Table
+          fixedHeader
+          selectable
+          multiSelectable={false}
+          onCellClick={(row) => this.props.selectApartment(this.props.apartments[row].name)}
         >
-          <TableRow>
-            <TableHeaderColumn colSpan='3' tooltip='Apartment List' style={{textAlign: 'center'}}>
-              Apartments
-            </TableHeaderColumn>
-          </TableRow>
-          <TableRow>
-            <TableHeaderColumn tooltip='The ID'>ID</TableHeaderColumn>
-            <TableHeaderColumn tooltip='The Name'>Name</TableHeaderColumn>
-            <TableHeaderColumn tooltip='The Status'>Status</TableHeaderColumn>
-          </TableRow>
-        </TableHeader>
-        <TableBody
-          displayRowCheckbox
-          deselectOnClickaway
-          showRowHover
-          stripedRows
-        >
-          {this.props.apartments.map((row, index) => (
-            <TableRow key={index} selected={row.selected}>
-              <TableRowColumn>{index}</TableRowColumn>
-              <TableRowColumn
-              >{row.name}</TableRowColumn>
-              <TableRowColumn>{row.status}</TableRowColumn>
+          <TableHeader
+            displaySelectAll={false}
+            adjustForCheckbox={false}
+            enableSelectAll={false}
+          >
+            <TableRow>
+              <TableHeaderColumn colSpan='3' tooltip='Apartment List' style={{textAlign: 'center'}}>
+                Apartments
+              </TableHeaderColumn>
             </TableRow>
-            ))}
-        </TableBody>
-      </Table>
+            <TableRow>
+              <TableHeaderColumn tooltip='The ID'>ID</TableHeaderColumn>
+              <TableHeaderColumn tooltip='The Name'>Name</TableHeaderColumn>
+              <TableHeaderColumn tooltip='The Status'>Status</TableHeaderColumn>
+            </TableRow>
+          </TableHeader>
+          <TableBody
+            displayRowCheckbox={false}
+            deselectOnClickaway
+            showRowHover
+            stripedRows
+          >
+            {this.props.apartments.map((row, index) => (
+              <TableRow key={index} selected={row.selected}>
+                <TableRowColumn>{index}</TableRowColumn>
+                <TableRowColumn
+                >{row.name}</TableRowColumn>
+                <TableRowColumn>{row.status}</TableRowColumn>
+              </TableRow>
+              ))}
+          </TableBody>
+        </Table>
+        <ApartmentDetail />
+      </div>
     )
   }
 }
