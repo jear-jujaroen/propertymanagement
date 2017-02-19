@@ -1,1 +1,21 @@
+.apartment-form-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  align-content: center;
+  flex-direction: row;
 
+}
+
+.field-one {
+  margin-top: 2%;
+  width: 40%;
+}
+
+.field-two {
+  width: 40%;
+}

@@ -27,14 +27,9 @@ class ApartmentTable extends Component {
             enableSelectAll={false}
           >
             <TableRow>
-              <TableHeaderColumn colSpan='3' tooltip='Apartment List' style={{textAlign: 'center', color: 'black'}}>
-                <h1>Apartments</h1>
-              </TableHeaderColumn>
-            </TableRow>
-            <TableRow>
               <TableHeaderColumn tooltip='The ID'>ID</TableHeaderColumn>
-              <TableHeaderColumn tooltip='The Name'>Name</TableHeaderColumn>
-              <TableHeaderColumn tooltip='The Status'>Status</TableHeaderColumn>
+              <TableHeaderColumn tooltip='The Name'>Address</TableHeaderColumn>
+              <TableHeaderColumn tooltip='The Status'>Room Available</TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody

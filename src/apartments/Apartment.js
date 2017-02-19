@@ -1,8 +1,10 @@
 import React from 'react'
 import ApartmentTable from './ApartmentListContainer'
+import TextFieldForm from './ApartmentForm'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import {Tabs, Tab} from 'material-ui/Tabs'
 import Paper from 'material-ui/Paper'
+import AppBar from 'material-ui/AppBar'
 import '../../css/apartment.css'
 
 const styles = {
@@ -33,13 +35,21 @@ const Apartment = () => (
         <Tab label='Apartment Form'>
           <div style={{textAlign: 'center', margin: '25px'}}>
             <Paper style={style} zDepth={1}>
-              <h2 style={styles.headline}>Apartment Form</h2>
+              <AppBar
+                title='Apartment Form'
+                showMenuIconButton={false}
+              />
+              <TextFieldForm />
             </Paper>
           </div>
         </Tab>
         <Tab label='Apartment List'>
           <div style={{textAlign: 'center', margin: '25px'}}>
             <Paper style={style} zDepth={1}>
+              <AppBar
+                title='Apartment List'
+                showMenuIconButton={false}
+              />
               <ApartmentTable />
             </Paper>
           </div>

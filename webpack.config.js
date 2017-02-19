@@ -41,11 +41,11 @@ var config = {
       {
         test: [/\.js$/],
         exclude: /node_modules/,
-        loader: 'react-hot!babel'
-        // loaders: [
-        //   'react-hot',
-        //   'babel-loader'
-        // ]
+        // loader: 'react-hot!babel'
+        loaders: [
+          'react-hot',
+          'babel-loader'
+        ]
       },
       // {
       //   test: [/\.js$/],
