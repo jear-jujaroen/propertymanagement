@@ -29,7 +29,7 @@ class ApartmentTable extends Component {
             <TableRow>
               <TableHeaderColumn tooltip='The ID'>ID</TableHeaderColumn>
               <TableHeaderColumn tooltip='The Name'>Address</TableHeaderColumn>
-              <TableHeaderColumn tooltip='The Status'>Room Available</TableHeaderColumn>
+              <TableHeaderColumn tooltip='The Status'>Units Available</TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody
@@ -42,7 +42,7 @@ class ApartmentTable extends Component {
               <TableRow key={index} selected={row.selected}>
                 <TableRowColumn>{index}</TableRowColumn>
                 <TableRowColumn
-                >{row.address}</TableRowColumn>
+                >{row.address}, {row.city}, {row.state} {row.zip}</TableRowColumn>
                 <TableRowColumn>{row.status}</TableRowColumn>
               </TableRow>
               ))}
