@@ -1,25 +1,34 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { addApartment } from '../actions/apartment/actionCreators'
 
 const style = {
   margin: 12
 }
 
-export default class TextFieldForm extends Component {
+class TextFieldForm extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
       address: '',
       city: '',
-      state: ''
+      state: '',
+      zip: ''
     }
 
     this.onAddressChange = this.onAddressChange.bind(this)
     this.onCityChange = this.onCityChange.bind(this)
     this.onStateChange = this.onStateChange.bind(this)
     this.onZipChange = this.onZipChange.bind(this)
+    this.onFormSubmit = this.onFormSubmit.bind(this)
+  }
+
+  static propTypes = {
+    addApartment: PropTypes.func.isRequired
   }
 
   onAddressChange (e) {
@@ -40,6 +49,27 @@ export default class TextFieldForm extends Component {
   onZipChange (e) {
     console.log(e.target.value)
     this.setState({ zip: e.target.value })
+  }
+
+  onFormSubmit (e) {
+    e.preventDefault()
+    console.log('submit button clicked')
+
+    this.props.addApartment(
+      {
+        address: this.state.address,
+        city: this.state.city,
+        state: this.state.state,
+        zip: this.state.zip
+      }
+    )
+
+    this.setState({
+      address: '',
+      city: '',
+      state: '',
+      zip: ''
+    })
   }
 
   render () {
@@ -80,4 +110,9 @@ export default class TextFieldForm extends Component {
   }
 }
 
-// export default TextFieldForm
+function mapDispatchToProps (dispatch) {
+  return bindActionCreators({ addApartment }, dispatch)
+}
+
+// we pass in null into the first parameter because we are not mapping state to props
+export default connect(null, mapDispatchToProps)(TextFieldForm)

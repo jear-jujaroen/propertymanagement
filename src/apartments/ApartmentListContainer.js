@@ -42,7 +42,7 @@ class ApartmentTable extends Component {
               <TableRow key={index} selected={row.selected}>
                 <TableRowColumn>{index}</TableRowColumn>
                 <TableRowColumn
-                >{row.name}</TableRowColumn>
+                >{row.address}</TableRowColumn>
                 <TableRowColumn>{row.status}</TableRowColumn>
               </TableRow>
               ))}
@@ -56,7 +56,7 @@ class ApartmentTable extends Component {
 
 function mapStateToProps (state) {
 // whatever is returned will show up as props
-// inside of BookList
+// inside of ApartmentList
   return {
     apartments: state.apartments
   }
@@ -66,7 +66,7 @@ function mapStateToProps (state) {
 // as props on the apartmentList container
 function mapDispatchToProps (dispatch) {
   // whenever selectApartment is called, the result should be
-  // pass to all of our reducers
+  // passed to all of our reducers
   return bindActionCreators({ selectApartment: selectApartment }, dispatch)
 }
 
