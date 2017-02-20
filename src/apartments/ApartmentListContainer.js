@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn } from 'material-ui/Table'
 import ApartmentDetail from './ApartmentDetail'
-import { selectApartment } from '../actions/actionCreators'
+import { selectApartment } from '../actions/apartment/actionCreators'
 import { bindActionCreators } from 'redux'
 // import {Link} from 'react-router'
 
