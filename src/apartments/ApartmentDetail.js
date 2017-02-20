@@ -14,7 +14,7 @@ class ApartmentDetail extends Component {
     return (
       <div>
         <h3>Details for:</h3>
-        <div>Address: {this.props.apartment.address}, {this.props.apartment.city}, {this.props.apartment.state} {this.props.apartment.zip}
+        <div>Address: {this.props.apartment.address} {this.props.apartment.city} {this.props.apartment.state} {this.props.apartment.zip}
         </div>
         <div>Units Available: {this.props.apartment.status}</div>
       </div>

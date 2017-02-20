@@ -42,7 +42,7 @@ class ApartmentTable extends Component {
               <TableRow key={index} selected={row.selected}>
                 <TableRowColumn>{index}</TableRowColumn>
                 <TableRowColumn
-                >{row.address}, {row.city}, {row.state} {row.zip}</TableRowColumn>
+                >{row.address} {row.city} {row.state} {row.zip}</TableRowColumn>
                 <TableRowColumn>{row.status}</TableRowColumn>
               </TableRow>
               ))}
