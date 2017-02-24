@@ -4,7 +4,8 @@
   "description": "A personal project",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --inline --colors --hot",
+    "start dev": "webpack-dev-server --progress --inline --colors --hot",
+    "start": "node server/server.js",
     "test": "standard",
     "commit": "git-cz",
     "build": "webpack"
