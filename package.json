@@ -8,7 +8,7 @@
     "start": "node server/server.js",
     "test": "standard",
     "commit": "git-cz",
-    "build": "webpack"
+    "build": "webpack --progress --inline --colors --watch"
   },
   "repository": {
     "type": "git",
@@ -60,6 +60,7 @@
     }
   },
   "dependencies": {
+    "body-parser": "^1.16.1",
     "express": "^4.14.1",
     "material-ui": "^0.16.6",
     "react": "^15.4.1",
