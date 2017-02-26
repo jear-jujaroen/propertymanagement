@@ -1,25 +1,32 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
 
-var config = {
-  devtool: 'inline-sourcemap',
+const config = {
+  debug: true,
+  devtool: 'cheap-module-source-map',
   context: path.join(__dirname, 'src'),
   entry: [
-    // 'webpack-dev-server/client?http://0.0.0.0:8000',
+    // 'webpack-hot-middleware/client',
     // 'webpack/hot/only-dev-server',
-    './index.js'
-    // 'webpack-hot-middleware/client'
+    'webpack-hot-middleware/client?reload=true',
+    // 'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    './index'
   ],
+  target: 'web',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/dist/'
+    publicPath: '/'
+  },
+  devServer: {
+    contentBase: './src'
   },
   eslint: {
     configFile: './.eslintrc'
   },
   plugins: [
-    // new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
   module: {

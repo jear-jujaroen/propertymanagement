@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start dev": "webpack-dev-server --progress --inline --colors --hot",
-    "start": "node server/server.js",
+    "start": "babel-node server/server.js",
     "test": "standard",
     "commit": "git-cz",
     "build": "webpack --progress --inline --colors --watch"
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jear-jujaroen/propertymanagement#readme",
   "devDependencies": {
+    "babel-cli": "^6.23.0",
     "babel-core": "^6.21.0",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
@@ -39,6 +40,7 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-react": "^6.8.0",
     "eslint-plugin-standard": "^2.0.1",
+    "eventsource-polyfill": "^0.9.6",
     "express": "^4.14.0",
     "file-loader": "^0.9.0",
     "jshint": "^2.9.4",
@@ -47,6 +49,7 @@
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "node-libs-browser": "^2.0.0",
+    "open": "0.0.5",
     "react-hot-loader": "^1.3.1",
     "strip-loader": "^0.1.2",
     "style-loader": "^0.13.1",
@@ -63,6 +66,7 @@
     "body-parser": "^1.16.1",
     "express": "^4.14.1",
     "material-ui": "^0.16.6",
+    "morgan": "^1.8.1",
     "react": "^15.4.1",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.1",
