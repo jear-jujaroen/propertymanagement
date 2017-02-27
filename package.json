@@ -4,10 +4,11 @@
   "description": "A personal project",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --inline --colors --hot",
+    "start": "node server/server.js",
+    "dev": "webpack-dev-server --progress --inline --colors --hot",
     "test": "standard",
     "commit": "git-cz",
-    "build": "webpack"
+    "build": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -59,8 +60,10 @@
     }
   },
   "dependencies": {
+    "body-parser": "^1.16.1",
     "express": "^4.14.1",
     "material-ui": "^0.16.6",
+    "morgan": "^1.8.1",
     "react": "^15.4.1",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.1",

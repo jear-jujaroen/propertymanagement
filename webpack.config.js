@@ -3,7 +3,7 @@ var webpack = require('webpack')
 
 var config = {
   devtool: 'inline-sourcemap',
-  context: path.join(__dirname, 'src'),
+  context: path.join(__dirname, '/public/src'),
   entry: [
     // 'webpack-dev-server/client?http://0.0.0.0:8000',
     // 'webpack/hot/only-dev-server',
@@ -11,9 +11,9 @@ var config = {
     // 'webpack-hot-middleware/client'
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/dist/'
+    path: path.join(__dirname, 'public/dist'),
+    filename: 'bundle.js'
+    // publicPath: '/public/'
   },
   eslint: {
     configFile: './.eslintrc'
