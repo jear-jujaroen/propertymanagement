@@ -4,7 +4,7 @@
   "description": "A personal project",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "nodemon server/server.js",
     "dev": "webpack-dev-server --progress --inline --colors --hot",
     "test": "standard",
     "commit": "git-cz",
@@ -64,6 +64,7 @@
     "express": "^4.14.1",
     "material-ui": "^0.16.6",
     "morgan": "^1.8.1",
+    "nodemon": "^1.11.0",
     "react": "^15.4.1",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.1",
