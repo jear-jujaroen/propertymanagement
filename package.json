@@ -4,10 +4,11 @@
   "description": "A personal project",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --inline --colors --hot",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/server.js",
+    "dev": "webpack-dev-server --progress --inline --colors --hot",
+    "test": "standard",
     "commit": "git-cz",
-    "build": "webpack"
+    "build": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/jear-jujaroen/propertymanagement#readme",
   "devDependencies": {
     "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
@@ -30,10 +32,18 @@
     "commitizen": "^2.9.2",
     "css-loader": "^0.26.1",
     "cz-conventional-changelog": "^1.2.0",
+    "eslint": "^3.13.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-config-standard-react": "^4.2.0",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-react": "^6.8.0",
+    "eslint-plugin-standard": "^2.0.1",
     "express": "^4.14.0",
     "file-loader": "^0.9.0",
     "jshint": "^2.9.4",
     "jshint-loader": "^0.8.3",
+    "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
     "node-libs-browser": "^2.0.0",
@@ -50,10 +60,17 @@
     }
   },
   "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
     "material-ui": "^0.16.6",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0",
     "react": "^15.4.1",
     "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.1",
-    "react-tap-event-plugin": "^2.0.1"
+    "react-redux": "^5.0.1",
+    "react-router": "^3.0.0",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.6.0"
   }
 }

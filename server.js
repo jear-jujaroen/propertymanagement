@@ -24,7 +24,7 @@
 //   console.log('Listening at http://localhost:3000/');
 // })
 
-//-------- another way to listen --------
+// -------- another way to listen --------
 // var server = app.listen(3000, function() {
 //   var host = server.address().address;
 //   var port = server.address().port;

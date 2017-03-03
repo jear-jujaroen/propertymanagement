@@ -1,45 +1,50 @@
-var path = require('path');
-var webpack = require('webpack');
+var path = require('path')
+var webpack = require('webpack')
 
 var config = {
-  context: path.join(__dirname, 'src'),
+  devtool: 'inline-sourcemap',
+  context: path.join(__dirname, '/public/src'),
   entry: [
-    // 'webpack-dev-server/client?http://0.0.0.0:3000',
+    // 'webpack-dev-server/client?http://0.0.0.0:8000',
     // 'webpack/hot/only-dev-server',
-    './index.js',
+    './index.js'
     // 'webpack-hot-middleware/client'
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/dist/'
+    path: path.join(__dirname, 'public/dist'),
+    filename: 'bundle.js'
+    // publicPath: '/public/'
+  },
+  eslint: {
+    configFile: './.eslintrc'
   },
   plugins: [
     // new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
   module: {
-    // preLoaders: [
-    //   {
-    //     test: /\.js$/,
-    //     exclude: /node_modules/
-        // loader: 'jshint-loader'
-    //   }
-    // ],
-    loaders: [
+    preloaders: [
       {
         test: [/\.js$/, /\.jsx$/],
+        exclude: /node_modules/,
+        loader: 'jshint-loader'
+      }
+    ],
+    loaders: [
+      {
+        test: [/\.js$/],
         exclude: /node_modules/,
         loaders: [
           'react-hot',
           'babel-loader'
         ]
-        // query: {
-        //   presets: ['react', 'es2015']
-        // }
       },
       {
-        test:/\.css$/,
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
+        test: /\.css$/,
         loader: 'style-loader!css-loader'
       },
       {
@@ -55,4 +60,4 @@ var config = {
   }
 }
 
-module.exports = config;
+module.exports = config
